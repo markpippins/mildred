@@ -33,7 +33,7 @@ cd docker
 ### Option 2: Manual Docker Compose
 ```bash
 cd docker
-docker-compose up --build -d
+docker compose up --build -d
 ```
 
 ### Access the Application
@@ -52,7 +52,7 @@ docker-compose up --build -d
 For development with debug tools:
 
 ```bash
-docker-compose --profile debug up -d
+docker compose --profile debug up -d
 ```
 
 This includes:
@@ -61,7 +61,7 @@ This includes:
 
 ## Configuration
 
-Key environment variables (set in docker-compose.yml):
+Key environment variables (set in docker compose.yml):
 
 - `REDIS_URL`: Redis connection string
 - `MONGODB_URL`: MongoDB connection string  
@@ -147,7 +147,7 @@ Supports multiple metadata extraction libraries:
 
 For production:
 
-1. Update `docker-compose.yml` with proper passwords
+1. Update `docker compose.yml` with proper passwords
 2. Configure volume mounts for your media directories
 3. Set up proper logging aggregation
 4. Configure backup for Redis/MongoDB/MySQL data
@@ -156,11 +156,11 @@ For production:
 ## Troubleshooting
 
 ### Scan Not Resuming
-- Check Redis connectivity: `docker-compose logs redis`
+- Check Redis connectivity: `docker compose logs redis`
 - Verify scan state: Use Redis Commander to inspect `scan:state:*` keys
 
 ### Database Connection Issues
-- Check service logs: `docker-compose logs app`
+- Check service logs: `docker compose logs app`
 - Verify network connectivity between containers
 
 ### Performance Issues

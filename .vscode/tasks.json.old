@@ -1,0 +1,7 @@
+{
+	"version": "0.1.0",
+	"command": "javac",
+	"showOutput": "always",
+	"isShellCommand": true,
+	"args": ["-d","${workspaceRoot}\\build\\classes","/var/host/media/removable/PNY16/home/mpippins/dev/m2/src/main/java/*.java"]
+}

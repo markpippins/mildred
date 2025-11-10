@@ -1,7 +1,26 @@
 {
-	"version": "0.1.0",
+	"version": "2.0.0",
 	"command": "javac",
-	"showOutput": "always",
-	"isShellCommand": true,
-	"args": ["-d","${workspaceRoot}\\build\\classes","/var/host/media/removable/PNY16/home/mpippins/dev/m2/src/main/java/*.java"]
+	"args": [
+		"-d",
+		"${workspaceRoot}\\build\\classes",
+		"/var/host/media/removable/PNY16/home/mpippins/dev/m2/src/main/java/*.java"
+	],
+	"tasks": [
+		{
+			"label": "javac",
+			"type": "shell",
+			"command": "javac",
+			"args": [
+				"-d",
+				"${workspaceRoot}\\build\\classes",
+				"/var/host/media/removable/PNY16/home/mpippins/dev/m2/src/main/java/*.java"
+			],
+			"problemMatcher": [],
+			"group": {
+				"_id": "build",
+				"isDefault": false
+			}
+		}
+	]
 }

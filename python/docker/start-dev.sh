@@ -11,14 +11,14 @@ if ! docker info > /dev/null 2>&1; then
     exit 1
 fi
 
-# Check if docker-compose is available
-if ! command -v docker-compose &> /dev/null; then
-    echo "❌ docker-compose not found. Please install docker-compose."
+# Check if docker compose is available
+if ! command -v docker compose &> /dev/null; then
+    echo "❌ docker compose not found. Please install docker compose."
     exit 1
 fi
 
 echo "📦 Building and starting services..."
-docker-compose up --build -d
+docker compose up --build -d
 
 echo ""
 echo "⏳ Waiting for services to be ready..."
@@ -55,8 +55,8 @@ echo "   • Redis Commander:  http://localhost:8081"
 echo "   • Mongo Express:    http://localhost:8082"
 echo ""
 echo "📝 Useful commands:"
-echo "   • View logs:        docker-compose logs -f"
-echo "   • Stop services:    docker-compose down"
-echo "   • Restart:          docker-compose restart"
+echo "   • View logs:        docker compose logs -f"
+echo "   • Stop services:    docker compose down"
+echo "   • Restart:          docker compose restart"
 echo ""
-echo "🔧 To start with debug tools: docker-compose --profile debug up -d"
+echo "🔧 To start with debug tools: docker compose --profile debug up -d"
