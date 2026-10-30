@@ -22,7 +22,7 @@ MySQL-python==1.2.5
 Pillow==12.3.0
 pygame==1.9.2b8
 Pygments==2.7.4
-pylint==1.6.4
+pylint==4.0.9
 pyorient==1.5.4
 PyYAML==5.4
 redis==2.10.5
